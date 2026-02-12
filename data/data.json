@@ -1,0 +1,131 @@
+{
+  "activites": [
+    {
+      "sync_id": "1",
+      "titre": "Séminaire sur l'IA et les Mathématiques Appliquées",
+      "description": "Présentation des dernières avancées en intelligence artificielle et leurs fondements mathématiques.",
+      "contenu": "Lors de ce séminaire, nos chercheurs ont présenté les résultats de leurs travaux sur les réseaux de neurones profonds et les méthodes d'optimisation stochastique. Les discussions ont porté sur les applications en vision par ordinateur et en traitement automatique du langage naturel.",
+      "image_url": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800",
+      "auteur": "Dr. Mbarga",
+      "date_creation": "2025-03-15T10:30:00",
+      "date_modification": "2025-03-15T14:20:00",
+      "est_publie": true
+    },
+    {
+      "sync_id": "2",
+      "titre": "Publication dans Journal of Computational Mathematics",
+      "description": "Article sur les nouvelles méthodes de résolution d'équations différentielles partielles.",
+      "contenu": "Notre équipe a publié un article intitulé 'Adaptive Finite Element Methods for Nonlinear PDEs' dans le Journal of Computational Mathematics. Cette recherche propose une approche innovante pour la simulation de phénomènes physiques complexes.",
+      "image_url": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800",
+      "auteur": "Prof. Nkou",
+      "date_creation": "2025-02-10T09:15:00",
+      "date_modification": "2025-02-12T11:30:00",
+      "est_publie": true
+    },
+    {
+      "sync_id": "3",
+      "titre": "Atelier de formation: Python pour la Data Science",
+      "description": "Formation intensive sur l'utilisation de Python pour l'analyse de données.",
+      "contenu": "Un atelier de 3 jours organisé en collaboration avec SCSM Group. Les participants ont appris les bases de Pandas, NumPy, et Scikit-learn pour résoudre des problèmes concrets de data science.",
+      "image_url": "https://images.unsplash.com/photo-1526379879527-8559ecfcaec0?w=800",
+      "auteur": "Dr. Tchinda",
+      "date_creation": "2025-01-20T08:00:00",
+      "date_modification": "2025-01-25T16:45:00",
+      "est_publie": true
+    }
+  ],
+  "realisations": [
+    {
+      "sync_id": "1",
+      "titre": "Plateforme de prédiction des récoltes",
+      "description": "Développement d'un modèle prédictif pour l'agriculture au Cameroun utilisant des données satellites et météorologiques.",
+      "image_url": "https://images.unsplash.com/photo-1593113598332-2888091c6c85?w=800",
+      "categorie": "Recherche",
+      "date_realisation": "2024-11-15",
+      "date_creation": "2024-11-20T10:00:00"
+    },
+    {
+      "sync_id": "2",
+      "titre": "Algorithme d'optimisation pour la logistique",
+      "description": "Solution algorithmique pour optimiser les tournées de livraison en zone urbaine.",
+      "image_url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800",
+      "categorie": "Projet",
+      "date_realisation": "2024-09-30",
+      "date_creation": "2024-10-05T14:30:00"
+    },
+    {
+      "sync_id": "3",
+      "titre": "Système de recommandation pour e-commerce",
+      "description": "Moteur de recommandation basé sur le filtrage collaboratif pour une plateforme de vente en ligne.",
+      "image_url": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800",
+      "categorie": "Innovation",
+      "date_realisation": "2024-08-12",
+      "date_creation": "2024-08-15T09:20:00"
+    }
+  ],
+  "annonces": [
+    {
+      "sync_id": "1",
+      "titre": "Appel à candidatures: Post-doctorat en Mathématiques",
+      "contenu": "Le laboratoire recrute un chercheur post-doctoral pour un projet de 2 ans sur les méthodes numériques avancées. Date limite: 30 juin 2025.",
+      "type_annonce": "info",
+      "date_debut": "2025-03-01T00:00:00",
+      "date_fin": "2025-06-30T23:59:59",
+      "date_creation": "2025-03-01T08:00:00",
+      "est_active": true
+    },
+    {
+      "sync_id": "2",
+      "titre": "Fermeture exceptionnelle du laboratoire",
+      "contenu": "Le laboratoire sera fermé du 25 au 29 mars pour maintenance des infrastructures. Les services en ligne restent accessibles.",
+      "type_annonce": "urgence",
+      "date_debut": "2025-03-20T00:00:00",
+      "date_fin": "2025-03-30T23:59:59",
+      "date_creation": "2025-03-18T11:15:00",
+      "est_active": true
+    },
+    {
+      "sync_id": "3",
+      "titre": "Conférence internationale sur les Mathématiques Appliquées",
+      "contenu": "Inscriptions ouvertes pour la conférence annuelle CIMA 2025 qui se tiendra à Yaoundé du 10 au 12 novembre 2025.",
+      "type_annonce": "evenement",
+      "date_debut": "2025-04-01T00:00:00",
+      "date_fin": "2025-11-12T23:59:59",
+      "date_creation": "2025-03-10T09:00:00",
+      "est_active": true
+    }
+  ],
+  "offres": [
+    {
+      "sync_id": "1",
+      "titre": "Ingénieur en Data Science",
+      "description": "Nous recherchons un ingénieur en data science pour rejoindre notre équipe R&D. Missions: développement d'algorithmes de machine learning, analyse de données complexes, participation à des projets de recherche.",
+      "type_offre": "emploi",
+      "lieu": "Douala",
+      "date_limite": "2025-05-15",
+      "date_creation": "2025-03-01T10:00:00",
+      "est_active": true
+    },
+    {
+      "sync_id": "2",
+      "titre": "Stage PFE: Modélisation mathématique",
+      "description": "Stage de fin d'études de 6 mois sur la modélisation de phénomènes climatiques. Connaissances requises: équations différentielles, Python, analyse numérique.",
+      "type_offre": "stage",
+      "lieu": "Yaoundé",
+      "date_limite": "2025-04-30",
+      "date_creation": "2025-03-05T14:00:00",
+      "est_active": true
+    },
+    {
+      "sync_id": "3",
+      "titre": "Formation: Introduction au Deep Learning",
+      "description": "Formation certifiante de 40 heures sur les fondamentaux du deep learning. À partir du 1er juin 2025.",
+      "type_offre": "formation",
+      "lieu": "En ligne",
+      "date_limite": "2025-05-25",
+      "date_creation": "2025-03-12T09:30:00",
+      "est_active": true
+    }
+  ],
+  "last_update": "2025-03-20T15:30:00"
+}
