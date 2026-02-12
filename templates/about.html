@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Lab_Math | Laboratoire de Mathématiques Appliquées</title>
+    <meta name="description" content="Découvrez le Laboratoire de Mathématiques Appliquées Lab_Math, notre mission, notre équipe et nos valeurs">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, #0a192f 0%, #0d2a44 100%);
+            padding: 120px 0 60px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .mission-card, .vision-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .mission-icon, .vision-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 20px;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .value-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--cyan);
+        }
+        
+        .value-icon {
+            font-size: 2rem;
+            color: var(--cyan);
+            margin-bottom: 15px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            text-align: center;
+        }
+        
+        .member-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+        
+        .stats-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <div class="logo-icon">∑</div>
+                <span class="logo-text">Lab_<span class="gradient-text">Math</span></span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="{{ url_for('index') }}" class="nav-link">Accueil</a></li>
+                <li><a href="{{ url_for('about_page') }}" class="nav-link active">À propos</a></li>
+                <li><a href="{{ url_for('index') }}#services" class="nav-link">Services</a></li>
+                <li><a href="{{ url_for('activites_page') }}" class="nav-link">Activités</a></li>
+                <li><a href="{{ url_for('realisations_page') }}" class="nav-link">Réalisations</a></li>
+                <li><a href="{{ url_for('annonces_page') }}" class="nav-link">Annonces</a></li>
+                <li><a href="{{ url_for('offres_page') }}" class="nav-link">Offres</a></li>
+                <li><a href="{{ url_for('contact_page') }}" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <span class="hero-badge">
+                <span class="pulse-dot"></span>
+                Qui sommes-nous ?
+            </span>
+            <h1 class="hero-title">
+                À propos de <span class="gradient-text">Lab_Math</span>
+            </h1>
+            <p class="hero-description">
+                Laboratoire d'excellence dédié à la recherche en mathématiques appliquées 
+                et au développement d'algorithmes innovants pour répondre aux défis du 21ème siècle.
+            </p>
+        </div>
+        <div class="math-pattern"></div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section">
+        <div class="container">
+            <div class="mission-vision">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 style="color: white; margin-bottom: 15px;">Notre Mission</h3>
+                    <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+                        Développer des solutions mathématiques innovantes et des algorithmes de pointe 
+                        pour résoudre des problèmes complexes dans les domaines de l'industrie, 
+                        de la technologie et de la recherche scientifique.
+                    </p>
+                </div>
+                
+                <div class="vision-card">
+                    <div class="vision-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 style="color: white; margin-bottom: 15px;">Notre Vision</h3>
+                    <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+                        Devenir un leader régional en mathématiques appliquées, reconnu pour l'excellence 
+                        de sa recherche et l'impact concret de ses innovations sur la société.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Histoire -->
+    <section class="section" style="background: var(--darker-bg);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Notre <span class="gradient-text">Histoire</span></h2>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="position: relative; padding-left: 30px; border-left: 2px solid var(--cyan);">
+                    <div style="margin-bottom: 40px; position: relative;">
+                        <div style="position: absolute; left: -41px; top: 0; width: 20px; height: 20px; background: var(--cyan); border-radius: 50%;"></div>
+                        <h3 style="color: white; margin-bottom: 10px;">2020 - Fondation</h3>
+                        <p style="color: rgba(255,255,255,0.7);">Création du Laboratoire de Mathématiques Appliquées en partenariat avec SCSM Group.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 40px; position: relative;">
+                        <div style="position: absolute; left: -41px; top: 0; width: 20px; height: 20px; background: var(--cyan); border-radius: 50%;"></div>
+                        <h3 style="color: white; margin-bottom: 10px;">2022 - Premiers projets</h3>
+                        <p style="color: rgba(255,255,255,0.7);">Lancement des premiers projets de recherche appliquée en data science et optimisation.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 40px; position: relative;">
+                        <div style="position: absolute; left: -41px; top: 0; width: 20px; height: 20px; background: var(--cyan); border-radius: 50%;"></div>
+                        <h3 style="color: white; margin-bottom: 10px;">2024 - Expansion</h3>
+                        <p style="color: rgba(255,255,255,0.7);">Élargissement de l'équipe et des domaines d'expertise : IA, modélisation climatique.</p>
+                    </div>
+                    
+                    <div style="position: relative;">
+                        <div style="position: absolute; left: -41px; top: 0; width: 20px; height: 20px; background: var(--cyan); border-radius: 50%;"></div>
+                        <h3 style="color: white; margin-bottom: 10px;">2025 - Aujourd'hui</h3>
+                        <p style="color: rgba(255,255,255,0.7);">Laboratoire de référence en Afrique centrale pour les mathématiques appliquées.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valeurs -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos <span class="gradient-text">Valeurs</span></h2>
+                <p class="section-subtitle">Les principes qui guident notre recherche et notre collaboration.</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 style="color: white; margin-bottom: 10px;">Excellence</h3>
+                    <p style="color: rgba(255,255,255,0.7);">La rigueur scientifique et la qualité sont au cœur de notre travail.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 style="color: white; margin-bottom: 10px;">Innovation</h3>
+                    <p style="color: rgba(255,255,255,0.7);">Nous repoussons les limites pour trouver des solutions créatives.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 style="color: white; margin-bottom: 10px;">Collaboration</h3>
+                    <p style="color: rgba(255,255,255,0.7);">Le partage des connaissances est essentiel à notre progression.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <h3 style="color: white; margin-bottom: 10px;">Impact</h3>
+                    <p style="color: rgba(255,255,255,0.7);">Nos recherches doivent bénéficier concrètement à la société.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Équipe -->
+    <section class="section" style="background: var(--darker-bg);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Notre <span class="gradient-text">Équipe</span></h2>
+                <p class="section-subtitle">Des chercheurs passionnés et des experts reconnus.</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 style="color: white;">Prof. Jean Nkou</h3>
+                    <p style="color: var(--cyan);">Directeur</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Analyse numérique</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 style="color: white;">Dr. Marie Mbarga</h3>
+                    <p style="color: var(--cyan);">Chercheuse senior</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Data Science</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 style="color: white;">Dr. Paul Tchinda</h3>
+                    <p style="color: var(--cyan);">Chercheur</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Optimisation</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 style="color: white;">Dr. Alice Ngannou</h3>
+                    <p style="color: var(--cyan);">Chercheuse</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Modélisation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistiques -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3 style="color: white;">20+</h3>
+                    <p style="color: rgba(255,255,255,0.9);">Projets réalisés</p>
+                </div>
+                <div class="stat-item">
+                    <h3 style="color: white;">15</h3>
+                    <p style="color: rgba(255,255,255,0.9);">Chercheurs</p>
+                </div>
+                <div class="stat-item">
+                    <h3 style="color: white;">30+</h3>
+                    <p style="color: rgba(255,255,255,0.9);">Publications</p>
+                </div>
+                <div class="stat-item">
+                    <h3 style="color: white;">10</h3>
+                    <p style="color: rgba(255,255,255,0.9);">Partenaires</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lab_Math</h3>
+                    <p>Laboratoire de Mathématiques Appliquées<br>Recherche & Innovation</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="{{ url_for('index') }}">Accueil</a></li>
+                        <li><a href="{{ url_for('about_page') }}">À propos</a></li>
+                        <li><a href="{{ url_for('activites_page') }}">Activités</a></li>
+                        <li><a href="{{ url_for('contact_page') }}">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> contact@labmathscsmaubmar.org</p>
+                    <p><i class="fas fa-phone"></i> +237 620 307 439</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lab_Math. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
